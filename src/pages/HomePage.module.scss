@@ -1,0 +1,88 @@
+@import './src/variables';
+
+.mainSection {
+  position: relative;
+  height: 423px;
+  background-color: $grey;
+  border-top: 1px solid transparent;
+}
+
+.mainPhoto {
+  position: absolute;
+  right: 0;
+}
+
+h1 {
+  font-family: 'Acumin Bold', sans-serif;
+  font-size: 32px;
+  margin-top: 85px;
+}
+
+h2 {
+  font-family: 'Acumin Bold', sans-serif;
+  color: $green;
+  font-size: 36px;
+  margin-top: 65px;
+}
+
+h3 {
+  font-family: 'Acumin Bold', sans-serif;
+  font-size: 36px;
+}
+
+.infoText {
+  color: $green;
+  font-size: 24px;
+}
+
+.problemsSection {
+  border-top: 1px solid transparent;
+
+}
+
+.row {
+  display: flex;
+  gap: 170px;
+  margin-bottom: 70px;
+
+  &:first-child {
+    margin-top: 70px;
+  }
+}
+
+.reviewsSection {
+  background-color: $grey;
+  padding: 58px 0;
+}
+
+.borderCardHeader {
+  font-size: 24px;
+}
+
+.borderCardSubtitle {
+  font-size: 14px;
+  color: $green;
+}
+
+.borderCardInfo {
+  font-size: 24px;
+  color: $green;
+}
+
+.fullCenter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.greenBtn {
+  background-color: $green;
+  font-size: 32px;
+  color: white;
+  width: 570px;
+  height: 85px;
+  margin-bottom: 50px;
+  &:hover {
+    background-color: rgba($green, 0.8);
+  }
+}

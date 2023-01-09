@@ -1,0 +1,17 @@
+@import "./src/variables";
+
+.input {
+  background-color: white;
+  outline: none;
+  border: 1px solid $green;
+  padding: 3px 10px;
+  height: 45px;
+  width: 350px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: 'Acumin Regular', sans-serif;
+  &::placeholder {
+    color: grey;
+  }
+}
