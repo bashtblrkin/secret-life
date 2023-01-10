@@ -4,6 +4,7 @@ import {Outlet} from "react-router-dom";
 import Modal from "../components/Modal/Modal";
 import AuthorizeForm from "../components/Form/AuthorizeForm/AuthorizeForm";
 import RegisterForm from "../components/Form/RegisterForm/RegisterForm";
+import Footer from "../components/Footer/Footer";
 
 const HomeLayout = () => {
 
@@ -22,6 +23,7 @@ const HomeLayout = () => {
         <div>
             <Header onSignInClick={() => {setSignInModalOpen(true)}}/>
             <Outlet />
+            <Footer />
             <Modal isOpen={signInModalOpen} onClose={handleSignInModalClose}>
                 <AuthorizeForm onClickRegister={() => {
                     setSignInModalOpen(false)

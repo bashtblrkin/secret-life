@@ -1,0 +1,86 @@
+@import './src/variables';
+
+.card {
+  width: 100%;
+  background-color: $grey;
+  padding: 30px 40px;
+  border-radius: 10px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  &:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+.psyImg {
+  border-radius: 20px;
+}
+
+.firstBlock {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.btn {
+  height: 40px;
+  color: white;
+  background-color: $green;
+  font-family: 'Acumin Bold', sans-serif;
+  font-size: 20px;
+  &:hover {
+    background-color: rgba($green, 0.8);
+  }
+}
+
+.secondBlock {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-top: 0;
+  font-family: 'Acumin Bold', sans-serif;
+  font-size: 24px;
+  &:hover {
+    cursor: default;
+    opacity: 1;
+  }
+}
+
+h4 {
+  font-family: 'Acumin Regular', sans-serif;
+  font-size: 16px;
+}
+
+.subtitle {
+  color: $green;
+  white-space: break-spaces;
+}
+
+.aboutBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  & p{
+    color: $green;
+  }
+}
+
+.titleEducation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  & h3 {
+    margin: 0;
+  }
+  & p {
+    margin: 0;
+    color: $green;
+    line-height: 14px;
+  }
+}

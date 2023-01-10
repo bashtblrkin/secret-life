@@ -1,0 +1,19 @@
+@import './src/variables';
+
+.circle {
+  position: fixed;
+  right: 34px;
+  bottom: 34px;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  background-color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($green, 0.8);
+  }
+}
