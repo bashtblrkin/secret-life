@@ -53,11 +53,11 @@ const HomePage = () => {
                     }}>
                         <p className={styles.borderCardHeader}>Елена</p>
                         <span className={styles.borderCardSubtitle}>Специалист по интернет-рекламе</span>
-                        <p className={styles.borderCardInfo}>Полтора года назад я увидела рекламу сервиса Zigmund.Online,
+                        <p className={styles.borderCardInfo}>Полтора года назад я увидела рекламу сервиса SecretLife,
                             и он показался мне интересным. У меня было представление,
                             что успех психотерапии зависит не только от правильного специалиста,
                             но и от меня тоже — важно, насколько я намерена прикладывать усилия
-                            и разбираться в себе. Поэтому я начала работать со специалистом из Zigmund.Online,
+                            и разбираться в себе. Поэтому я начала работать со специалистом из SecretLife,
                             как только поняла, что готова.</p>
                     </BorderedCard>
                 </Container>

@@ -84,3 +84,18 @@ h4 {
     line-height: 14px;
   }
 }
+
+.educationBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.educationTitle {
+  font-size: 16px;
+}
+
+.educationSubtitle {
+  font-size: 16px;
+  color: $green;
+}

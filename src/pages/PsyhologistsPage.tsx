@@ -3,9 +3,10 @@ import React from 'react';
 import eyes from "../assets/img/eyes.jpg";
 import Container from "../components/Container/Container";
 
-import styles from './PsyhologistsPage.module.scss'
+
 import Button from "../components/Button/Button";
 import BorderedCard from "../components/BorderedCard/BorderedCard";
+import styles from './PsyhologistsPage.module.scss';
 
 const PsyhologistsPage = () => {
 

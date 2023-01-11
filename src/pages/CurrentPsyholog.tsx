@@ -39,9 +39,15 @@ const CurrentPsyholog = () => {
                     </p>
                     <div className={styles.titleEducation}>
                         <h3>Образование</h3>
-                        <p>1 высшее,4 дополнительных</p>
+                        <p>{psyholog?.educationInfo}</p>
                     </div>
-
+                    {psyholog?.education.map(edu => <div key={edu.title} className={styles.educationBlock}>
+                        <p className={styles.educationYear}>{edu.year}</p>
+                        <div className={styles.educationTitleAndSubtitle}>
+                            <p className={styles.educationTitle}>{edu.title}</p>
+                            <p className={styles.educationSubtitle}>{edu.subtitle}</p>
+                        </div>
+                    </div>)}
                 </div>
             </div>
         </Container>

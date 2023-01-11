@@ -4,8 +4,9 @@ import Input from "../components/Control/Input/Input";
 import searchIcon from '../assets/img/search.png';
 import {Psyhologs} from "../data/psyhologs";
 
-import styles from './SearchPage.module.scss'
+
 import CardPsyholog from "../components/CardPsyholog/CardPsyholog";
+import styles from './SearchPage.module.scss'
 
 const SearchPage = () => {
 
