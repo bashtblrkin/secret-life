@@ -8,7 +8,11 @@ const AuthorizeLayout = () => {
     return (
         <>
             <AuthorizedHeader />
-            <Outlet />
+            <div style={{
+                flex: '1 0 auto'
+            }}>
+                <Outlet />
+            </div>
             <Footer />
             <FixedCircle />
         </>

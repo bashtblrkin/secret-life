@@ -22,7 +22,11 @@ const HomeLayout = () => {
     return (
         <div>
             <Header onSignInClick={() => {setSignInModalOpen(true)}}/>
-            <Outlet />
+            <div style={{
+                flex: '1 0 auto'
+            }}>
+                <Outlet />
+            </div>
             <Footer />
             <Modal isOpen={signInModalOpen} onClose={handleSignInModalClose}>
                 <AuthorizeForm onClickRegister={() => {

@@ -17,10 +17,11 @@ interface CardPsyhologProps {
         first: string,
         second: string,
         third: string
-    }
+    },
+    onClickBtn: (name: string) => void
 }
 
-const CardPsyholog: FC<CardPsyhologProps> = ({id, img, name, subtitle, benefits}) => {
+const CardPsyholog: FC<CardPsyhologProps> = ({id, img, name, subtitle, benefits, onClickBtn}) => {
 
     const navigate = useNavigate()
 
@@ -28,7 +29,7 @@ const CardPsyholog: FC<CardPsyhologProps> = ({id, img, name, subtitle, benefits}
         <div className={styles.card}>
             <div className={styles.firstBlock}>
                 <img src={img} alt="" className={styles.psyImg}/>
-                <Button title={'Записаться'} className={styles.btn}/>
+                <Button title={'Записаться'} className={styles.btn} onClick={() => onClickBtn(name)}/>
             </div>
             <div className={styles.secondBlock}>
                 <h3 onClick={() => {navigate(`/search/${id}`)}}>{name}</h3>

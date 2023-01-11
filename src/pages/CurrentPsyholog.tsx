@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import styles from "./CurrentPsyholog.module.scss";
 import Button from "../components/Button/Button";
 import cloud from "../assets/img/cloud.png";
@@ -7,51 +7,56 @@ import cloudSecond from "../assets/img/cloud-two.png";
 import {useParams} from "react-router-dom";
 import {Psyhologs} from "../data/psyhologs";
 import Container from "../components/Container/Container";
+import Modal from "../components/Modal/Modal";
 
 const CurrentPsyholog = () => {
 
     const params = useParams()
-
+    const [modalIsOpen, setModalIsOpen] = useState(false)
     const psyholog = useMemo(() => {
         return Psyhologs.find(psyholog => psyholog.id.toString() === params.id)
     }, [params])
 
     return (
-        <Container>
-            <div className={styles.card}>
-                <div className={styles.firstBlock}>
-                    <img src={psyholog?.img} alt="" className={styles.psyImg}/>
-                    <Button title={'Записаться'} className={styles.btn}/>
-                </div>
-                <div className={styles.secondBlock}>
-                    <h3>{psyholog?.name}</h3>
-                    <h4>О психотерапевте</h4>
-                    <div className={styles.aboutBlock}>
-                        <img src={cloud} alt=""/>
-                        <p>{psyholog?.benefits.first}</p>
-                        <img src={diplom} alt=""/>
-                        <p>{psyholog?.benefits.second}</p>
-                        <img src={cloudSecond} alt=""/>
-                        <p>{psyholog?.benefits.third}</p>
+        <>
+            <Container>
+                <div className={styles.card}>
+                    <div className={styles.firstBlock}>
+                        <img src={psyholog?.img} alt="" className={styles.psyImg}/>
+                        <Button title={'Записаться'} className={styles.btn} onClick={() => setModalIsOpen(true)}/>
                     </div>
-                    <p className={styles.subtitle}>
-                        {psyholog?.fullInfo}
-                    </p>
-                    <div className={styles.titleEducation}>
-                        <h3>Образование</h3>
-                        <p>{psyholog?.educationInfo}</p>
-                    </div>
-                    {psyholog?.education.map(edu => <div key={edu.title} className={styles.educationBlock}>
-                        <p className={styles.educationYear}>{edu.year}</p>
-                        <div className={styles.educationTitleAndSubtitle}>
-                            <p className={styles.educationTitle}>{edu.title}</p>
-                            <p className={styles.educationSubtitle}>{edu.subtitle}</p>
+                    <div className={styles.secondBlock}>
+                        <h3>{psyholog?.name}</h3>
+                        <h4>О психотерапевте</h4>
+                        <div className={styles.aboutBlock}>
+                            <img src={cloud} alt=""/>
+                            <p>{psyholog?.benefits.first}</p>
+                            <img src={diplom} alt=""/>
+                            <p>{psyholog?.benefits.second}</p>
+                            <img src={cloudSecond} alt=""/>
+                            <p>{psyholog?.benefits.third}</p>
                         </div>
-                    </div>)}
+                        <p className={styles.subtitle}>
+                            {psyholog?.fullInfo}
+                        </p>
+                        <div className={styles.titleEducation}>
+                            <h3>Образование</h3>
+                            <p>{psyholog?.educationInfo}</p>
+                        </div>
+                        {psyholog?.education.map(edu => <div key={edu.title} className={styles.educationBlock}>
+                            <p className={styles.educationYear}>{edu.year}</p>
+                            <div className={styles.educationTitleAndSubtitle}>
+                                <p className={styles.educationTitle}>{edu.title}</p>
+                                <p className={styles.educationSubtitle}>{edu.subtitle}</p>
+                            </div>
+                        </div>)}
+                    </div>
                 </div>
-            </div>
-        </Container>
-
+            </Container>
+            <Modal isOpen={modalIsOpen} onClose={() => setModalIsOpen(false)}>
+                <p>Вы успешно записалиись к психологу {psyholog?.name}</p>
+            </Modal>
+        </>
     );
 };
 
